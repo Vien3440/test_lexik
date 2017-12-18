@@ -1,0 +1,127 @@
+
+/**** Table HomePage  ****/
+#tableContent{
+    padding-left: 215px;
+}
+#tableHome {
+    font-family: "Trebuchet MS", Arial, sans-serif;
+
+    width: 100%;
+
+}
+
+#tableHome td, #tableHome th {
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+
+#tableHome tr:nth-child(even){background-color: #f2f2f2;}
+
+#tableHome tr:hover {background-color: #ddd;}
+
+#tableHome th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: #2B94D2;
+    color: white;
+    font-weight: bold;
+}
+
+
+
+/**** Dashboard ****/
+#dashboard{
+    position: fixed;
+    background: #fff;
+    border: 1px solid #ddd;
+    
+}
+
+
+#dashboard form{
+    width:210px;
+    margin-bottom: 50px;
+    text-align: center;
+}
+#dashboard h3{
+    font-family: "Trebuchet MS", Arial, sans-serif;
+    font-weight: 700;
+    padding-top: 12px;
+    padding-bottom: 12px;
+}
+#dashboard input{
+
+    padding: 10px;
+    box-sizing: border-box;
+    background: none;
+    outline: none;
+    resize: none;
+    border: 0;
+    font-family: 'Montserrat',sans-serif;
+    transition: all .3s;
+    border-bottom: 2px solid #bebed2;
+    margin-top:10px;
+    margin-bottom:10px;
+
+
+
+
+
+}
+
+#dashboard input {
+    padding-top: 12px;
+    padding-bottom: 12px;
+}
+
+.btn-valide { 
+    color: #fff!important;
+    background-color: #2b6ed2!important;
+    border:0;
+    height: 30px;
+    float: right;
+    border-bottom: 0px !important;
+    cursor: pointer;   
+    padding-bottom: 7px;
+    padding-top: 9px;
+    font-family: "Trebuchet MS", Arial, sans-serif;
+    font-weight: 700;
+    margin-right: 5px !important;
+    margin-top: 5px  !important;
+} 
+.btn-valide a{ 
+    color: #fff!important;
+    text-decoration: none !important;
+} 
+
+.btn-supr { 
+    color: #fff!important;
+    background-color: #d88!important;
+    border:0;
+    height: 30px;
+    float: right;
+    border-bottom: 0px !important;
+    cursor: pointer;   
+    padding-bottom: 7px;
+    padding-top: 9px;
+    font-family: "Trebuchet MS", Arial, sans-serif;
+    font-weight: 700;
+    margin-right: 5px !important;
+    margin-top: 5px  !important;
+} 
+.btn-supr a{ 
+    color: #fff!important;
+    text-decoration: none !important;
+} 
+
+
+
+/* Error */
+#user  ul {
+    color: #fff;
+    background: #ff000073 ;
+    text-align: center;
+
+}
+

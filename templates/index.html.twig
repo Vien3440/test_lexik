@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Vue genérale Groupes</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
+        <link rel="stylesheet" href="{{ asset('build/css/main.css')}}">
+    </head>
+    <body>
+        {% block body %}
+            <div id="dashboard">
+                
+{#            ///////////////// Form New User  ////////////////////////// #}
+                <div id="formAddUser">
+                    {{ form_start(formUser) }}
+                    <h3>Ajout utilisateur</h3>
+                    {{ form_widget(formUser.email,{ 'attr': {'placeholder': 'Email'} }) }}
+                    {{ form_widget(formUser.user_firstname,{ 'attr': {'placeholder': 'Prénom'} }) }}
+                    {{ form_widget(formUser.user_lastname,{ 'attr': {'placeholder': 'Nom'} }) }}
+                    {{ form_widget(formUser.fk_group,{'label': 'foo'})}}
+
+                    <button class="btn-valide"> validation </button>
+                    {{ form_end(formUser) }}
+                </div>
+                    
+{#            ////////////////// Form New Group  ///////////////////////// #}            
+                <div id="formAddUser">
+                    {{ form_start(formGroup) }}
+                    <h3>Ajout Groupe</h3>
+                    {{ form_widget(formGroup.name,{ 'attr': {'placeholder': 'Nom du nouveaux groupe'} }) }}
+                    <button class="btn-valide"> validation </button>
+                    {{ form_end(formGroup) }}
+                </div>
+                    
+{#            //////////////////// Form Research  /////////////////////// #}
+                <form action="{{ path('research')}}" method="GET">
+                    <h3>Recherche</h3>
+                    <input type="text" name="name" placeholder="Recherche">
+                    <input class="btn-valide" type="submit">
+                    <button class="btn-valide"> <a href={{path('homepage')}}>Réinitialiser</a></button>
+                </form>
+            </div>
+                    
+{#            ///////////// Result table///////////////////////// #}
+            <div id="tableContent">
+                <table id="tableHome">
+                    <tr>
+                        <th> Groupe</th>
+                        <th> Prenom</th>
+                        <th> Nom</th>
+                        <th> Email</th>
+                        <th> </th>
+                    </tr>
+                    {% for user in users  %}
+                        <tr id="{{user.id}}">
+                            <td class="userNameGroup" > {{user.name}}</td>
+                            <td> {{user.user_firstname}}</td>
+                            <td> {{user.user_lastname}}</td>
+                            <td> {{user.email}}</td>
+                            <td> <button class="btn-supr"> <a href="{{ path('userRemove',{'id': user.id})}} "> Suprr</a> </button> </td>
+                        </tr>
+                    {% endfor %}
+                </table>
+            </div>
+        {% endblock %}
+
+    </body>
+</html>
